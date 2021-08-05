@@ -1,0 +1,21 @@
+# copy this color and highlight section to your newsboat config.
+
+# matrix
+color background         color233 color233
+color listnormal color28 default
+color listfocus color233 color220 standout bold
+color listnormal_unread color106 default
+color listfocus_unread color47 default bold
+color info color40 color233 bold
+color article color34 default
+
+# highlights
+highlight article "^Feed:.*" color5 color233
+highlight article "^Title:.*" color3 color233 bold
+highlight article "^Author:.*" color2 color233
+highlight article "^Date:.*" color223 color233
+highlight article "^Link:.*" color4 color233
+highlight article "^Flags:.*" color9 color233
+highlight article "\\[[0-9[0-9]*\\]" color66 default bold
+highlight article "\\[image [0-9][0-9]*\\]" color109 color233 bold
+highlight article "\\[embedded flash: [0-9][0-9]*\\]" color66 color233 bold
