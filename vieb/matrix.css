@@ -1,0 +1,220 @@
+:root {
+  --bg: #091013;
+  --fg: #81b32c;
+
+  --tab-background: #091013;
+  --visible-tab: #496619;
+  --tab-scrollbar: #333333;
+
+  --mode-normal-fg: #00cb6b;
+  --mode-command-fg: #426644;
+  --mode-follow-fg: #6fa64c;
+  --mode-insert-fg: #8ec07c;
+  --mode-explore-fg: #90d762;
+  --mode-search-fg: #e2e500;
+  --mode-pointer-fg: #412A4D;
+  --mode-pointer-bg: #1A1A1A;
+  --mode-visual-fg: #00ff87;
+  --mode-visual-bg: #1A1A1A;
+
+  --suggestions-border: #384545;
+  --suggestions-bg: #091013;
+  --suggestions-selected: #496619;
+  --suggestions-url: #00cd6d;
+  --suggestions-file: #00ff87;
+  --notification-border: #00ff00;
+  --notification-date: #689d6a;
+  --notification-permission: #32213c;
+  --notification-error: #e2e500;
+  --notification-warning: #595900;
+  --notification-info: #6fa64c;
+  --notification-success: #90d762;
+
+  /* follow mode */
+  --follow-text: #C1FF8A;
+  --follow-url-bg: #125459;
+  --follow-url-border: #002e19;
+  --follow-click-bg: #00321a;
+  --follow-click-border: #003c1f;
+  --follow-insert-bg: #125459;
+  --follow-insert-border: #5b5;
+  --follow-onclick-bg: #125459;
+  --follow-onclick-border: #50B45A;
+  --follow-other-bg: #125459;
+  --follow-other-border: #aaa;
+
+  /* special pages */
+  --link-color: #00cd6d;
+  --link-underline: var(--link-color);
+  --scrollbar-bg: #333333;
+  --scrollbar-thumb: #ccc;
+  --button-disabled: #777;
+  --code-fg: #90d762;
+  --code-bg: #091013;
+  --special-page-element-bg: #333333;
+  --special-page-element-border: #928374;
+  --input-unfocused: #333333;
+  --input-focused: #999;
+  --download-progress-fg: #00ff87;
+  --download-progress-bg: #091013;
+  --helppage-h1: #e2e500;
+  --helppage-h2: #00ff87;
+  --helppage-h3: #90d762;
+  --code-command: #00FF87;
+  --helppage-countable: #6fa64c;
+}
+
+/* general */
+#tabs .status {
+  filter: invert(0.4);
+}
+
+/* special pages */
+#pointer,
+#cookiespage img,
+#downloadspage img,
+#historypage img {
+  filter: invert(1);
+}
+#historypage img.favicon {
+  filter: none;
+}
+
+[current-mode="normal"] {
+  --mode-fg: var(--mode-normal-fg);
+}
+[current-mode="command"] {
+  --mode-fg: var(--mode-command-fg);
+}
+[current-mode="insert"] {
+  --mode-fg: var(--mode-insert-fg);
+}
+[current-mode="follow"] {
+  --mode-fg: var(--mode-follow-fg);
+}
+[current-mode="explore"] {
+  --mode-fg: var(--mode-explore-fg);
+}
+[current-mode="search"] {
+  --mode-fg: var(--mode-search-fg);
+}
+[current-mode="pointer"] {
+  --mode-fg: var(--mode-pointer-fg);
+}
+[current-mode="visual"] {
+  --mode-fg: var(--mode-visual-fg);
+}
+
+/* navbar && tabbar */
+#url {
+  background: #1a1a1a;
+  border: solid 0.15em;
+}
+
+#navbar,
+#tabs {
+  background: #1a1a1a;
+}
+#tabs > span {
+  color: var(--fg);
+}
+
+body {
+  --mode-theme-bg: var(--mode-fg);
+}
+body[current-mode="normal"] {
+  --mode-theme-bg: #1a1a1a;
+}
+#navbar,
+#tabs {
+  background: var(--mode-theme-bg);
+}
+
+body #mode {
+  color: #1d2021;
+}
+body[current-mode="normal"] #mode {
+  color: var(--fg);
+}
+body[current-mode="pointer"] #mode {
+  color: var(--fg);
+}
+body[current-mode="follow"] #mode {
+  color: var(--fg);
+}
+body[current-mode="command"] #mode {
+  color: var(--fg);
+}
+[current-mode="normal"] #url {
+  background: #333333;
+  color: var(--fg);
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* mini mode */
+#mode {
+  position: fixed;
+  bottom: 0.3em;
+  left: 0.3em;
+  /* background: black; */
+  width: 1ch;
+  overflow: hidden;
+}
+#mode-container {
+  width: 2ch;
+}
+#mode-suggestions {
+  display: none;
+}
+#logo {
+  display: none;
+}
+/* mini mode */
+
+#app {
+  flex-direction: column-reverse;
+}
+#url-hover {
+  bottom: 4em;
+}
+#suggest-dropdown {
+  top: auto;
+  bottom: 2.1em;
+  flex-direction: column-reverse;
+}
+#mode-suggestions {
+  left: 0;
+  top: auto;
+  bottom: 2em;
+  flex-direction: column-reverse;
+}
+.bottomright {
+  right: 0.7em;
+  bottom: 4em;
+}
+.bottomleft {
+  left: 0.7em;
+  bottom: 4em;
+}
+.topright {
+  right: 0.7em;
+  top: 0.7em;
+}
+.topleft {
+  left: 0.7em;
+  top: 0.7em;
+}
+/* hidden bars */
+#app.tabshidden #url-hover,
+#app.navigationhidden #url-hover {
+  bottom: 2em;
+}
+#app.tabshidden.navigationhidden #url-hover {
+  bottom: 0;
+}
+#app.navigationhidden #suggest-dropdown {
+  top: auto;
+  bottom: 0.1em;
+}

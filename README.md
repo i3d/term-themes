@@ -18,4 +18,6 @@ Terminal themes I created. To save and ease my eyes for lo000ong coding time.
 
 ## The chrome themes are for fun, so they aren't in webstore. You need to just unzip it and go to "chrome://extensions" and "load unpacked".
 
+## Vieb color themes are plain css files, just copy them to the colors dir and set the colorschema to `matrix` would work.
+
 ## color palette script is stolen from mbadolato/iTerm2-Color-Schemes.
