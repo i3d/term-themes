@@ -14,7 +14,7 @@ Terminal themes I created, to save and ease my eyes for lo000ong coding time. NO
 
 ![Screenshot](screenshots/darkermatrix.png)
 
-### alacritty,newwboat,vscode color themes aren't standalone files, just copy those to their configs.
+### alacritty,newsboat,vscode,hyper color themes aren't standalone files, just copy those to their configs.
 
 ### The chrome themes are for fun, so they aren't in webstore. You need to just unzip it and go to "chrome://extensions" and "load unpacked".
 
